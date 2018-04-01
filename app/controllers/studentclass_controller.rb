@@ -1,27 +1,27 @@
 class StudentClass < ApplicationController
 
-  
-  def index 
-  end 
 
-  def new 
-  end 
+  def index
+  end
+
+  def new
+  end
 
   def show
-  end 
-  
+  end
+
   def create
   end
 
-  def edit 
-  end 
+  def edit
+  end
 
   def update
-  end  
+  end
 
-  private 
+  private
 
-    def accept_params 
-      StudentClass.
-    end 
-end 
+    def post_params
+      params.require(:post).permit(*args)
+    end
+end
