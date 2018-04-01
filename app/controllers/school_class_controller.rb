@@ -21,7 +21,7 @@ class SchoolClassController < ApplicationController
   end
 
   def update
-    SchoolClass.update(post_params(:school_class_title, :school_class_room_number))
+    @new_school_class = SchoolClass.update(post_params(:school_class_title, :school_class_room_number))
     redirect_to schoolclass_path(@new_school_class)
   end
 
