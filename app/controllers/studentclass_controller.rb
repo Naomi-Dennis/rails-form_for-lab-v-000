@@ -8,6 +8,7 @@ class StudentClass < ApplicationController
   end
 
   def show
+    @student_class = StudentClass.find(params[:id]);
   end
 
   def create
