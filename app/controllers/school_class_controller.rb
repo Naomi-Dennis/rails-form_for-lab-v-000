@@ -1,4 +1,4 @@
-class StudentClass < ApplicationController
+class SchoolClassController < ApplicationController
 
 
   def index
@@ -8,10 +8,12 @@ class StudentClass < ApplicationController
   end
 
   def show
-    @student_class = StudentClass.find(params[:id]);
+    @school_class = SchoolClass.find(params[:id]);
   end
 
   def create
+    SchoolClass.create(post_params(:school_class_title, :school_class_room_number))
+    redirect_to school
   end
 
   def edit
