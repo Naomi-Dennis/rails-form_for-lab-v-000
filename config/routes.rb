@@ -55,5 +55,5 @@ Rails.application.routes.draw do
   #   end
   resources :schoolclasses
 
-  root 'studentclasses#index'
+  root 'schoolclasses#index'
 end
